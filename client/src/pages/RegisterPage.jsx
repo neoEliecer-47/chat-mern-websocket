@@ -8,8 +8,8 @@ import { useUserContext } from "../context/UserContext";
 const RegisterPage = () => {
     const navigate = useNavigate();
     const { setUser } = useUserContext()
-    
-    
+    //
+        
     const onSubmit = async (
         values,
         { setSubmitting, setErrors, resetForm }
