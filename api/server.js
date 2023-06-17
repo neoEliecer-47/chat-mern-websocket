@@ -126,10 +126,10 @@ wsServer.on("connection", async(connection, req) => {
                 sender: connection._id,
                 recipient,
                 text,
-                file: file ? file : null
+                file: file ? file : null 
             })
             await messageDoc.save()
-
+//
 
             try {
                 [...wsServer.clients]
