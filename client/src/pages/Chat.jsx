@@ -35,7 +35,7 @@ const Chat = () => {
 
     
     const connectToWs = () => {
-        const ws = new WebSocket("ws://localhost:8080");
+        const ws = new WebSocket('ws://api-chat-ws.onrender.com');
         setWs(ws);
         ws.addEventListener("message", handleMessageReceived)//esta ejecuta y cada renderizado
         ws.addEventListener("close", () => {

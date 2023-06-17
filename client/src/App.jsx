@@ -7,7 +7,7 @@ import axios from "axios";
 import Chat from "./pages/Chat";
 
 const App = () => {
-    axios.defaults.baseURL = "http://localhost:8080/api/v1";
+    axios.defaults.baseURL = "https://api-chat-ws.onrender.com/api/v1";
     axios.defaults.withCredentials = true;
 
     return (
