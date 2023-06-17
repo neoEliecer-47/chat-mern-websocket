@@ -1,5 +1,5 @@
 const useFetch = async (endpoint, method = "GET", userData = null) => {
-    const res = await fetch("http://localhost:8080/api/v1" + endpoint, {
+    const res = await fetch("https://api-chat-ws.onrender.com/api/v1" + endpoint, {
         method: method,
         credentials: "include",
 
