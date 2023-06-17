@@ -21,7 +21,7 @@ const app = express();
 app.use(
     cors({
         credentials: true,
-        origin: "http://localhost:5173",
+        origin: "https://chat-mern-ws.netlify.app",
     })
 );
 
@@ -44,7 +44,11 @@ const server = app.listen(8080, () =>
     console.log("conectado al puerto http://localhost:8080")
 );
 
-const wsServer = new WebSocketServer({ server });
+const wsServer = new WebSocketServer({ server }, {
+    cors: {
+        origin: "https://chat-mern-ws.netlify.app"
+    }
+});
 
 wsServer.on("connection", async(connection, req) => {
     
