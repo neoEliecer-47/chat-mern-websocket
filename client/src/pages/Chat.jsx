@@ -155,7 +155,7 @@ if(file.type === 'image/jpeg' || file.type === 'image/png' || file.type === 'ima
                 
             })
 }else {
-    alert("por favor, seleccione una imagen")
+    alert("solo imagenes tipo jpg. png o jpeg")
      
       return;
 }
@@ -208,7 +208,7 @@ const logout = async () => {
 
 
 
-if(!user) return <Navigate to={'/login'} />
+if(!user) return <Navigate to={'/login'} />//small bug fixed
 
 
     return (
