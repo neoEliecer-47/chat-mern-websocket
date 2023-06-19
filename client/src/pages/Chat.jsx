@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useUserContext } from "../context/UserContext";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
 
@@ -33,7 +33,7 @@ const Chat = () => {
         
     }, []);
 
-    
+    //api-chat-ws.onrender.com
     const connectToWs = () => {
         const ws = new WebSocket('ws://api-chat-ws.onrender.com');
         setWs(ws);
@@ -188,6 +188,7 @@ useEffect(() => {
 
 
 
+
 const messagesWithoutDupes = uniqBy(sentMessages, '_id') 
 
 
@@ -207,8 +208,7 @@ const logout = async () => {
 
 
 
-if(!user) return <div>cargando...</div>//HERMOSO, no muestra el body y solucionado!! 
-
+if(!user) return <Navigate to={'/login'} />
 
 
     return (

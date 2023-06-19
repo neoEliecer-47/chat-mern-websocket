@@ -35,7 +35,7 @@ const LoginPage = () => {
             if (res.status === 404)
                 //not found
                 return setErrors({
-                    email: "¡este email no está registrado! ingrese otro, verifique o regístrese",
+                    email: "¡este email no está registrado! verifique o regístrese",
                 });
             if (res.status === 400)
                 //bad request
@@ -79,8 +79,8 @@ const LoginPage = () => {
             </h1>
             <Formik
                 initialValues={{
-                    email: "",
-                    password: "",
+                    email: "guestUser@test.com",
+                    password: "123",
                 }}
                 onSubmit={onSubmit}
                 validationSchema={validationSchema}

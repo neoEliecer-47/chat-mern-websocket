@@ -48,7 +48,9 @@ const wsServer = new WebSocketServer({ server }, {
     cors: {
         origin: "https://chat-mern-ws.netlify.app"
     }
-});
+}
+   
+);
 
 wsServer.on("connection", async(connection, req) => {
     
@@ -144,7 +146,7 @@ wsServer.on("connection", async(connection, req) => {
                         sender: connection._id.toString(),
                         recipient,
                         _id: messageDoc._id.toString(),
-                        file: file ? filename : null,//
+                        file: file ? file : null,//
                     
                     })))//
                    // console.log(algo)
